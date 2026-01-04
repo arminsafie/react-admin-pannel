@@ -106,7 +106,7 @@ export default function Dashboard() {
               <div />
               <button
                 onClick={() => setEditing((s) => !s)}
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                className={`px-4 py-2 md:block hidden rounded-lg text-sm font-semibold transition-all duration-200 ${
                   editing
                     ? "bg-blue-600 text-white shadow-lg hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700"
                     : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700"
