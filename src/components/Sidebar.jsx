@@ -167,8 +167,11 @@ export default function Sidebar() {
 
           {/* Footer */}
           <div className="pt-4 border-t border-transparent dark:border-gray-700">
-            <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+            <p className="text-xs text-gray-500 dark:text-gray-200 text-center">
               v2.0.0
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-200 text-center">
+              &copy; 2026 Design & Developed by Armin Safaie
             </p>
           </div>
         </div>
