@@ -117,7 +117,7 @@ export default function Navbar() {
             </svg>
           </div>
           <span
-            className={`hidden md:inline text-lg font-bold bg-gradient-to-r ${colorPalettes[colorPalette].gradient} bg-clip-text text-transparent`}
+            className={` md:inline text-lg font-bold bg-gradient-to-r ${colorPalettes[colorPalette].gradient} bg-clip-text text-transparent`}
           >
             {panelName}
           </span>
@@ -236,7 +236,7 @@ export default function Navbar() {
           <button
             onClick={toggleDarkMode}
             aria-label="Toggle theme"
-            className="p-2.5 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-blue-900 text-amber-500 transition-all duration-300 transform hover:scale-110"
+            className="p-2.5 hidden rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-blue-900 text-amber-500 transition-all duration-300 transform hover:scale-110"
             title="Toggle dark mode"
           >
             {theme === "dark" ? (
