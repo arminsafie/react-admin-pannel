@@ -170,7 +170,7 @@ export default function Sidebar() {
             <p className="text-xs text-gray-500 dark:text-gray-200 text-center">
               v2.0.0
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-200 text-center">
+            <p className=" text-[10px] md:text-xs text-gray-500 dark:text-gray-200 text-center">
               &copy; 2026 Design & Developed by Armin Safaie
             </p>
           </div>
