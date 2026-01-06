@@ -95,7 +95,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-30 backdrop-blur-md bg-white/80 dark:bg-gray-800/80 border-b border-transparent dark:border-gray-700">
+    <header className="sticky top-0  z-30 backdrop-blur-md bg-white/80 dark:bg-gray-800/80 border-b border-transparent dark:border-gray-700">
       <div className="flex justify-between items-center h-16 px-2 md:px-6 py-2 md:py-4 relative">
         {/* Left Section - Title */}
         <div className="flex items-center gap-2 md:gap-3">

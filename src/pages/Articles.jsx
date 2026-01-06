@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import { useArticleStore } from "../store/articleStore";
-
+import { useSettingsStore } from "../store/settingsStore";
 export default function Articles() {
   const { articles, deleteArticle, editArticle } = useArticleStore();
   const { id } = useParams();
@@ -50,11 +50,20 @@ export default function Articles() {
     setEditingId(null);
     setFormData({});
   };
+  const sidebarWidth = useSettingsStore((s) => s.sidebarWidth);
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row dark:bg-gray-900 bg-gray-50">
       <Sidebar />
-      <div className="flex-1 md:ml-64">
+      <div
+        className={`flex-1 ${
+          sidebarWidth === "compact"
+            ? "md:ml-48"
+            : sidebarWidth === "wide"
+            ? "md:ml-80"
+            : "md:ml-64"
+        } `}
+      >
         <Navbar />
         <main className="p-4 md:p-6 md:row-span-8 md:col-span-4 mt-16 md:mt-0 mb-20 md:mb-0 overflow-auto">
           <div className="max-w-7xl mx-auto">
