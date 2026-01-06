@@ -41,6 +41,7 @@ export default function Settings() {
     setNotifications(formData.notifications);
     setAutoSave(formData.autoSave);
     toast.success("Settings saved successfully!");
+    console.log(formData);
   };
 
   const availableWidgets = useWidgetsStore((s) => s.availableWidgets);
@@ -125,7 +126,12 @@ export default function Settings() {
     },
     { name: "Pink", value: "pink", gradient: "from-pink-500 to-pink-600" },
   ];
-
+  // working on widthOptions
+  const widthOptions = [
+    { name: "Compact", value: "compact" },
+    { name: "Normal", value: "normal" },
+    { name: "Wide", value: "wide" },
+  ];
   return (
     <div className="min-h-screen flex flex-col md:flex-row dark:bg-gray-900 bg-gray-50">
       <Sidebar />
@@ -288,9 +294,11 @@ export default function Settings() {
                       }
                       className="w-full px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-700 border border-transparent dark:border-gray-600 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
                     >
-                      <option value="compact">Compact (Narrow)</option>
-                      <option value="normal">Normal (Default)</option>
-                      <option value="wide">Wide (Large)</option>
+                      {widthOptions.map((option) => (
+                        <option key={option.value} value={option.value}>
+                          {option.name}
+                        </option>
+                      ))}
                     </select>
                   </div>
 

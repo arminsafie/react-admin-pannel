@@ -6,7 +6,7 @@ export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const colorPalette = useSettingsStore((s) => s.colorPalette);
   const colorPalettes = useSettingsStore((s) => s.colorPalettes);
-
+  const sidebarWidth = useSettingsStore((s) => s.sidebarWidth);
   return (
     <>
       {/* Mobile Menu Button */}
@@ -31,9 +31,17 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <aside
-        className={`fixed md:fixed top-0 left-0 h-screen w-64 bg-gradient-to-b from-white to-white dark:from-gray-800 dark:to-gray-900 transform transition-transform duration-300 ease-in-out z-40 ${
+        className={`fixed md:fixed top-0 left-0 md:w-64 h-screen bg-gradient-to-b from-white to-white dark:from-gray-800 dark:to-gray-900 transform transition-transform duration-300 ease-in-out z-40 ${
           isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
-        } md:p-3 md:max-h-screen md:col-span-1 row-span-10 col-span-2 border-r border-transparent dark:border-gray-700 shadow-xl md:shadow-lg`}
+        } md:p-3 md:max-h-screen md:col-span-1 row-span-10 col-span-2 border-r border-transparent dark:border-gray-700 shadow-xl md:shadow-lg 
+        ${
+          sidebarWidth === "compact"
+            ? "w-48"
+            : sidebarWidth === "wide"
+            ? "w-full "
+            : "w-64"
+        } 
+        `}
       >
         <div className="h-full flex flex-col p-4 md:p-6">
           <div className="flex justify-between items-center mb-8">
@@ -168,7 +176,7 @@ export default function Sidebar() {
           {/* Footer */}
           <div className="pt-4 border-t border-transparent dark:border-gray-700">
             <p className="text-xs text-gray-500 dark:text-gray-200 text-center">
-              v2.0.2
+              v2.0.3
             </p>
             <p className=" text-[10px] md:text-xs text-gray-500 dark:text-gray-200 text-center">
               &copy; 2026 Design & Developed by Armin Safaie

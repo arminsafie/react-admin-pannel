@@ -56,6 +56,11 @@ export const useSettingsStore = create(
           text: "text-pink-600",
         },
       },
+      sidebarWidths: {
+        normal: "w-64",
+        compact: "w-80",
+        wide: "w-full",
+      },
 
       setPanelName: (name) => set({ panelName: name }),
       setColorPalette: (palette) => set({ colorPalette: palette }),
