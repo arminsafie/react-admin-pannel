@@ -53,7 +53,7 @@ export default function Users() {
       <div
         className={`flex-1 ${
           sidebarWidth === "compact"
-            ? "md:ml-48"
+            ? "md:ml-54"
             : sidebarWidth === "wide"
             ? "md:ml-80"
             : "md:ml-64"

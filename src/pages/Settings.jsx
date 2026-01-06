@@ -139,7 +139,7 @@ export default function Settings() {
       <div
         className={`flex-1 ${
           sidebWidth === "compact"
-            ? "md:ml-48"
+            ? "md:ml-54"
             : sidebWidth === "wide"
             ? "md:ml-80"
             : "md:ml-64"

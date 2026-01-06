@@ -36,7 +36,7 @@ export default function Sidebar() {
         } md:p-3 md:max-h-screen md:col-span-1 row-span-10 col-span-2 border-r border-transparent dark:border-gray-700 shadow-xl md:shadow-lg 
         ${
           sidebarWidth === "compact"
-            ? "w-48 md:w-48"
+            ? "w-48 md:w-54"
             : sidebarWidth === "wide"
             ? "w-full md:w-80"
             : "w-64 md:w-64"
